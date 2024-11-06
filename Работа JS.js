@@ -1,47 +1,57 @@
-let name2 = prompt('Укажите имя')
-console.log(name2)
+let name = prompt('Укажите имя')
+console.log(name)
 
-let lastname2 = prompt('Укажите фамилию')
-console.log(lastname2)
+let lastname = prompt('Укажите фамилию')
+console.log(lastname)
 
-let middlename2 = prompt('Укажите отчество')
-console.log(middlename2)
+let middlename = prompt('Укажите отчество')
+console.log(middlename)
 
-let age2 = prompt('Возраст')
-console.log(age2)
+let age = prompt('Возраст')
+console.log(age)
 
-let shcool2 = prompt('Щкола')
-console.log(shcool2)
+let school = prompt('Школа')
+console.log(school)
 
-let clas2 = prompt('Класс')
-console.log(clas2)
+let clas = prompt('Класс')
+console.log(clas)
 
-let sport2 = prompt('Любимый спорт')
-console.log(sport2)
+let sport = prompt('Любимый спорт')
+console.log(sport)
 
-let subject2 = prompt('Любимый subject')
-console.log(subject2)
+let subject = prompt('Любимый subject')
+console.log(subject)
 
-let color2 = prompt('Любимый color')
-console.log(color2)
+let color = prompt('Любимый color')
+console.log(color)
 
 let nameDOM = document.getElementById('name');
-nameDOM.innerText = name2;
+nameDOM.innerText = name;
 
-let nameDOM = document.getElementById('lastname');
-nameDOM.innerText = lastname2;
+let lastnameDOM = document.getElementById('lastname');
+lastnameDOM.innerText = lastname;
 
-let nameDOM = document.getElementById('middlename');
-nameDOM.innerText = middlename2;
+let midlenameDOM = document.getElementById('middlename');
+midlenameDOM.innerText = middlename;
 
-let nameDOM = document.getElementById('sport');
-nameDOM.innerText = sport2;
+let sportDOM = document.getElementById('sport');
+sportDOM.innerText = sport;
 
-let nameDOM = document.getElementById('color');
-nameDOM.innerText = color2;
+let colorDOM = document.getElementById('color');
+colorDOM.innerText = color;
 
-let nameDOM = document.getElementById('class');
-nameDOM.innerText = clas2;
+let clasDOM = document.getElementById('class');
+clasDOM.innerText = clas;
 
-let nameDOM = document.getElementById('school');
-nameDOM.innerText = shcool2;
+let choolDOM = document.getElementById('school');
+choolDOM.innerText = school;
+
+let subjectDOM = document.getElementById('subject');
+subjectDOM.innerText = subject;
+
+let ageDOM = document.getElementById('age');
+ageDOM.innerText = age;
+
+let form = document.getElementById('form');
+let button = document.getElementById('button');
+button.addEventListener('reset', () => form.reset())
