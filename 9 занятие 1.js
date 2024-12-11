@@ -15,75 +15,112 @@
 let a0 = 0;
 
 function nolick(){
-    a0.value = 0;
-
+    a0 = 0;
+    changeText.innerText = a0;
     let sdf = document.getElementById("sdf");
     sdf.style.backgroundColor = "black";
     sdf.style.color = "white";
-
 }
 
 function odin(){
-    a0.value = 1;
+    a0 = 1;
     let sdf = document.getElementById("sdf");
     sdf.style.backgroundColor = "white";
     sdf.style.color = "black";
-
+    changeText.innerText = a0;
+    console.log(a0)
 }
 
 
 
 
 function dwa(){
-    a0.value = 2;
+    a0 = 2;
     let sdf = document.getElementById("sdf");
     sdf.style.backgroundColor = "blue";
     sdf.style.color = "white";
+    changeText.innerText = a0;
+    console.log(a0)
+
 }
 
 function five(){
-    a0.value = 5;
+    a0 = 5;
     let sdf = document.getElementById("sdf");
     sdf.style.backgroundColor = "green";
     sdf.style.color = "white";
+    changeText.innerText = a0;
+
 }
 
 function plus1(){
-    a0.value = a0 + 1;
+    a0 = a0 + 1;
+    changeText.innerText = a0;
+    if (a0 === 5){
+        let sdf = document.getElementById("sdf");
+        sdf.style.backgroundColor = 'green';
+        sdf.style.color = 'white';}
+    else if (a0 === 2){
+        let sdf = document.getElementById("sdf");
+        sdf.style.backgroundColor = 'blue';
+        sdf.style.color = 'white';}
+
+else if (a0 === 1){
     let sdf = document.getElementById("sdf");
-    if (a0 % 2){
-        function color0(){
+    sdf.style.backgroundColor = 'white';
+    sdf.style.color = 'black';}
+
+else if (a0 === 0){
+    let sdf = document.getElementById("sdf");
+    sdf.style.backgroundColor = nolick.name;
+    sdf.style.color = nolick.name;}
+
+    else if (a0 % 2){
             let sdf = document.getElementById("sdf");
-            sdf.style.backgroundColor = "red";
+            sdf.style.backgroundColor = "gold";
             sdf.style.color = "black";
-        }
     }
     else{
         let sdf = document.getElementById("sdf");
-        sdf.style.backgroundColor = "gold";
+        sdf.style.backgroundColor = "red";
         sdf.style.color = "black";
     }
 
 }
 function minus1(){
-    a0.value = a0-1;
-    let sdf = document.getElementById("sdf");
-    if (a0 % 2){
-        function color0(){
-            let sdf = document.getElementById("sdf");
-            sdf.style.backgroundColor = "red";
-            sdf.style.color = "black";
-        }
+    a0 = a0-1;
+    changeText.innerText = a0;
+    if (a0 === 5){
+        let sdf = document.getElementById("sdf");
+        sdf.style.backgroundColor = 'green';
+        sdf.style.color = 'white';}
+    else if (a0 === 2){
+        let sdf = document.getElementById("sdf");
+        sdf.style.backgroundColor = 'blue';
+        sdf.style.color = 'white';}
+
+    else if (a0 === 1){
+        let sdf = document.getElementById("sdf");
+        sdf.style.backgroundColor = 'white';
+        sdf.style.color = 'black';}
+
+    else if (a0 === 0){
+        let sdf = document.getElementById("sdf");
+        sdf.style.backgroundColor = nolick.name;
+        sdf.style.color = nolick.name;}
+
+    else if (a0 % 2){
+        let sdf = document.getElementById("sdf");
+        sdf.style.backgroundColor = "gold";
+        sdf.style.color = "black";
     }
     else{
         let sdf = document.getElementById("sdf");
-        sdf.style.backgroundColor = "gold";
+        sdf.style.backgroundColor = "red";
         sdf.style.color ="black";
-
     }
-    changeText.innerText = a0;
 
 }
-
 let changeText = document.getElementById("total");
+console.log(a0)
 changeText.innerText = a0;
