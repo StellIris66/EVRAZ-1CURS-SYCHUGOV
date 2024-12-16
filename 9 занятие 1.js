@@ -14,7 +14,7 @@
 
 let a0 = 0;
 
-function nolick(){
+function nolick() {
     a0 = 0;
     changeText.innerText = a0;
     let sdf = document.getElementById("sdf");
@@ -22,7 +22,7 @@ function nolick(){
     sdf.style.color = "white";
 }
 
-function odin(){
+function odin() {
     a0 = 1;
     let sdf = document.getElementById("sdf");
     sdf.style.backgroundColor = "white";
@@ -32,9 +32,7 @@ function odin(){
 }
 
 
-
-
-function dwa(){
+function dwa() {
     a0 = 2;
     let sdf = document.getElementById("sdf");
     sdf.style.backgroundColor = "blue";
@@ -44,7 +42,7 @@ function dwa(){
 
 }
 
-function five(){
+function five() {
     a0 = 5;
     let sdf = document.getElementById("sdf");
     sdf.style.backgroundColor = "green";
@@ -53,74 +51,84 @@ function five(){
 
 }
 
-function plus1(){
+function plus1() {
     a0 = a0 + 1;
     changeText.innerText = a0;
-    if (a0 === 5){
+    if (a0 === 5) {
         let sdf = document.getElementById("sdf");
         sdf.style.backgroundColor = 'green';
-        sdf.style.color = 'white';}
-    else if (a0 === 2){
+        sdf.style.color = 'white';
+    }
+    else if (a0 === 2) {
         let sdf = document.getElementById("sdf");
         sdf.style.backgroundColor = 'blue';
-        sdf.style.color = 'white';}
-
-else if (a0 === 1){
-    let sdf = document.getElementById("sdf");
-    sdf.style.backgroundColor = 'white';
-    sdf.style.color = 'black';}
-
-else if (a0 === 0){
-    let sdf = document.getElementById("sdf");
-    sdf.style.backgroundColor = nolick.name;
-    sdf.style.color = nolick.name;}
-
-    else if (a0 % 2){
-            let sdf = document.getElementById("sdf");
-            sdf.style.backgroundColor = "gold";
-            sdf.style.color = "black";
-    }
-    else{
-        let sdf = document.getElementById("sdf");
-        sdf.style.backgroundColor = "red";
-        sdf.style.color = "black";
+        sdf.style.color = 'white';
     }
 
-}
-function minus1(){
-    a0 = a0-1;
-    changeText.innerText = a0;
-    if (a0 === 5){
-        let sdf = document.getElementById("sdf");
-        sdf.style.backgroundColor = 'green';
-        sdf.style.color = 'white';}
-    else if (a0 === 2){
-        let sdf = document.getElementById("sdf");
-        sdf.style.backgroundColor = 'blue';
-        sdf.style.color = 'white';}
-
-    else if (a0 === 1){
+    else if (a0 === 1) {
         let sdf = document.getElementById("sdf");
         sdf.style.backgroundColor = 'white';
-        sdf.style.color = 'black';}
+        sdf.style.color = 'black';
+    }
 
-    else if (a0 === 0){
+    else if (a0 === 0) {
         let sdf = document.getElementById("sdf");
         sdf.style.backgroundColor = nolick.name;
-        sdf.style.color = nolick.name;}
+        sdf.style.color = nolick.name;
+    }
 
-    else if (a0 % 2){
+    else if (a0 % 2) {
         let sdf = document.getElementById("sdf");
         sdf.style.backgroundColor = "gold";
         sdf.style.color = "black";
     }
-    else{
+    else {
         let sdf = document.getElementById("sdf");
         sdf.style.backgroundColor = "red";
-        sdf.style.color ="black";
+        sdf.style.color = "black";
     }
 
 }
+
+function minus1() {
+    a0 = a0 - 1;
+    changeText.innerText = a0;
+    if (a0 === 5) {
+        let sdf = document.getElementById("sdf");
+        sdf.style.backgroundColor = 'green';
+        sdf.style.color = 'white';
+    }
+    else if (a0 === 2) {
+        let sdf = document.getElementById("sdf");
+        sdf.style.backgroundColor = 'blue';
+        sdf.style.color = 'white';
+    }
+
+    else if (a0 === 1) {
+        let sdf = document.getElementById("sdf");
+        sdf.style.backgroundColor = 'white';
+        sdf.style.color = 'black';
+    }
+
+    else if (a0 === 0) {
+        let sdf = document.getElementById("sdf");
+        sdf.style.backgroundColor = nolick.name;
+        sdf.style.color = nolick.name;
+    }
+
+    else if (a0 % 2) {
+        let sdf = document.getElementById("sdf");
+        sdf.style.backgroundColor = "gold";
+        sdf.style.color = "black";
+    }
+    else {
+        let sdf = document.getElementById("sdf");
+        sdf.style.backgroundColor = "red";
+        sdf.style.color = "black";
+    }
+
+}
+
 let changeText = document.getElementById("total");
 console.log(a0)
 changeText.innerText = a0;
