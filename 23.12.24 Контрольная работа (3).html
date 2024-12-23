@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontorl darks</title>
+    <link
+            rel="stylesheet"
+      href="23.12.24%20Контрольная%20работа%20(3).css"
+    >
+
+</head>
+<body id="bober">
+<div>
+  <div><button onclick="makeWhite()" class="button1">Фон белый, текст черный, кнопки белые с черным текстом</button></div>
+  <div><button onclick="makeBlack()" class="button2">Фон черный, текст белый, кнопки серые с белым текстом </button></div>
+    <div><button onclick="makeDarkblue()" class="button3">Фон darkblue, текст greenyellow, кнопки goldenrod с black текстом</button></div>
+    <div><button onclick="makeGray()" class="button5">Фон gray, текст черный, цвет кнопки черные с белым текстом</button></div>
+    <div><button onclick="makeGoldenrod()" class="button4">Фон darkblue, текст greenyellow, кнопки goldenrod с черным текстом </button></div>
+</div>
+<br>
+<div>
+  <span><button onclick="minus10()">Уменьшить на 10</button></span><span><button onclick="minus1()">Уменьшить на 1</button></span><span><button onclick="plus1()">Увеличить на 1</button></span><span><button onclick="plus10()">Увеличить на 10</button></span>
+</div>
+<div class="textTek">Текущее число:<span id="res"></span> <button onclick="MyText">Изменить число на свое</button></div>
+<br>
+<div>
+  Число четное:<span id="SP%2"></span>
+  Число делится на 3 без остатка:<span id="SP3"></span>
+  Число делится на 5 без остатка:<span id="SP5"></span>
+  Число делится на 7 без остатка:<span id="SP7"></span>
+</div>
+<hr>
+<div>История четных чисел:</div><span id="SPCHETRES"></span>
+<hr>
+<div>История чисел делящихся на 3 без остатка:</div><span id="SP3RES"></span>
+<hr>
+<div>История чисел делящихся на 5 без остатка:</div><span id="SP5RES"></span>
+<hr>
+<div>История чисел делящихся на 7 без остатка:</div><span ID="SP7RES"></span>
+<hr>
+<div>История остальных чисел:</div><span id="SPOTRES"></span>
+
+
+<script src="23.12.24%20Контрольная%20работа%20(3).js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+.button1 {
+    background-color: white;
+    color: black;
+}
+.button2 {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.button3 {
+    background-color: goldenrod;
+   color: black;
+}
+
+.button4 {
+    background-color: darkblue;
+    color: greenyellow;
+}
+
+.textTek{
+    font-size: 30px;
+}
+
+.button5{
+    background-color: gray;
+    color: black;
+}
