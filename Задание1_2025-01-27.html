@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Guess</title>
+    <linK
+            rel="stylesheet"
+            href="Здание1_2025-01-27.css"
+    >
 </head>
 <body>
 <br>
@@ -10,12 +14,27 @@
     <b class="Names">Имена</b>
 </div>
 <br>
-<input id="vvodone" type="text">
-<button onclick="addOne()">Add</button>
+<input type="text" id="vvodone">
+<button onclick="addOne()">Добавить</button>
 <br>
 <br>
 <div><b>Место для добавления</b></div>
-<span class="listNames"></span>
+<ul id="listNames" class="listNames">
+    <li class="bnm">Павел</li>
+</ul>
+
+<div><b class="Sities">Города</b></div>
+<br>
+<input type="text" id="vvodtwo">
+<button onclick="addTwo()">Добавить</button>
+<br>
+<br>
+<div><b>Место для добавления</b></div>
+<ol id="listSities" class="listSities">
+    <li class="snm">Нижний Тагил</li>
+</ol>
+
+
 <script src="Задание1_2025-01-27.js"></script>
 </body>
 </html>
