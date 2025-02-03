@@ -6,4 +6,14 @@
 .listSities{
     font-weight: 400;
     color: red;
+    text-decoration:underline;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+.block {
+    width: 50%;
 }

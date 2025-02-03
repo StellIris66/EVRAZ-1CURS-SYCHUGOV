@@ -13,7 +13,15 @@ function addOne() {
 }
 
 function addTwo(){
-    let sp = document.getElementById('liseSities');
+    let sp = document.getElementById('listSities');
     let inp2 = document.getElementById('vvodtwo');
-
+    let liElement = document.createElement('li')
+    if (inp2.value ===''){
+    alert('Добавь значение Города!')
+    }
+    else{
+        liElement.innerText = inp2.value;
+        sp.append(liElement);
+        inp2.value = '';
+    }
 }
