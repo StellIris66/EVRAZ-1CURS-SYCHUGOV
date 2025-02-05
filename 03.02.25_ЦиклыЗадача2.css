@@ -1,20 +1,24 @@
-.TegName{
+.TegName {
     font-size: 20px;
-  font-weight: bolder;
+    font-weight: bolder;
 }
-body{
-    display:flex;
+
+body {
+    display: flex;
     flex-direction: row;
 }
-.block{
-    width:50%;
+
+.block {
+    width: 50%;
 }
-.NameList{
+
+.NameList {
     font-style: italic;
     color: #71bf1c;
 
 }
-.NameSities{
-    color:red;
-  text-decoration: underline;
+
+.NameSities {
+    color: red;
+    text-decoration: underline;
 }
