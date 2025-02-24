@@ -1,0 +1,22 @@
+.blockred {
+    width: 80px;
+    background: #df002f;
+    padding: 80px;
+    padding-right: 5px;
+    float: left;
+}
+.blockgreen{
+    width: 80px;
+    background: #38c138;
+    padding: 80px;
+    padding-right: 5px;
+    float: left;
+}
+
+.blockblue{
+    width: 80px;
+    background: #003fff;
+    padding: 80px;
+    padding-right: 5px;
+    float: left;
+}
