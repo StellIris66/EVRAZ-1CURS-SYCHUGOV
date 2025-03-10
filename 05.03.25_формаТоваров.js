@@ -5,8 +5,8 @@ let inputPrice = document.getElementById('price');
 let inputCount = document.getElementById('count');
 let inputDiscount = document.getElementById('discount');
 let inputDescription = document.getElementById('description');
-let selectColor = document.getElementById('tovar-color');
-let input
+let selectColor = document.getElementById('color');
+let inputPoint = document.getElementById('point');
 let categories = {
     'clothes': 'Одежда',
     'shoes': 'Обувь',
@@ -18,10 +18,10 @@ let specialsObj = {
     'fragile': 'Хрупкое',
 }
 let color = {
-    'Red':'Красный',
-    'Blue':'Синий',
-    'Black':'Черный',
-    'Yellow':'Желтый',
+    'Red': 'Красный',
+    'Blue': 'Синий',
+    'Black': 'Черный',
+    'Yellow': 'Желтый',
 }
 
 function discount(item) {
@@ -56,14 +56,15 @@ function addTovar() {
         price = `<div class="tovar-price">
                     <div>Цена: </div>
                     <div>
-                        <div class="tovar-price-old">${ inputPrice.value } руб.</div>
-                        <div>${ newPrice } руб.</div>
+                        <div class="tovar-price-old">${inputPrice.value} руб.</div>
+                        <div>${newPrice} руб.</div>
                     </div>
                 </div>`
     }
     else {
-        price = `<div class="tovar-price">Цена: ${ inputPrice.value } руб.</div>`;
+        price = `<div class="tovar-price">Цена: ${inputPrice.value} руб.</div>`;
     }
+    let payChoose = document.querySelector('input[name=tovarpay]:checked')
 
     // достаем все чекбоксы особенностей и генерируем текст
     let specialsText = '';
@@ -72,19 +73,35 @@ function addTovar() {
     for (let i = 0; i < specials.length; i++) {
         // console.log(specials[i].value, specialsObj[specials[i].value]);
         specialsText += ' ' + specialsObj[specials[i].value];
+
     }
 
-    let card = `<div class="tovar-name">${ inputName.value }</div>
-            <div class="tovar-category">${ categories[selectCategory.value] }</div>
-            <div class="tovar-specials">Особенности: ${ specialsText }</div>
-            <div class="tovar-color">Цвет: ${}</div>
-            <div class="tovar-description">${ inputDescription.value }</div>
+    let card = `<div class="tovar-name">${inputName.value}</div>
+            <div class="tovar-category">${categories[selectCategory.value]}</div>
+            <div class="tovar-specials">Особенности: ${specialsText}</div>
+            <div class="tovar-point">Пункт выдачи: ${inputPoint.value}</div>
+            <div class="tovar-description">${inputDescription.value}</div>
+            <div class="tovar-pay">Способ оплаты: ${payChoose.value}</div>
+            <div class="tovar-color">Цвет:${color[selectColor.value]}</div>
             <div class="tovar-price-count">
-                ${ price }
-                <div class="count">Количество: ${ inputCount.value } шт.</div>
+                ${price}
+                <div class="count">Количество: ${inputCount.value} шт.</div>
             </div>
-            <div class="tovar-close">X</div>`
+            <div id="del" class="tovar-close">X</div>`
 
     cardTovar.innerHTML = card;
     listDOM.append(cardTovar);
+
+    let del =document.getElementById('del')
+    del.addEventListener('click', function(){card.remove();})
+
+inputName.value = '';
+inputCount.value = '';
+inputDiscount.value = '';
+inputDescription.value = '';
+inputPoint.value = '';
+inputPrice.value ='';
+
+
 }
+

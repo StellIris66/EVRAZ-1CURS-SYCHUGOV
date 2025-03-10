@@ -82,6 +82,10 @@
             border: 1px solid black;
             cursor: pointer;
         }
+        .tovar-point {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -152,10 +156,39 @@
                 rows="5"
         ></textarea>
     </div>
+    <div class="item">
+        Пункт выдачи:
+        <textarea
+                name=""
+                id="point"
+                cols="5"
+                rows="2"
+        ></textarea>
+    </div>
+    <div class="item">
+        <div>Способ оплаты:</div>
+        <div>
+            <input type="radio" id="nal" name="tovarpay" value="Наличными">
+            <label for="nal">наличными</label>
 
+            <input type="radio" id="kart" name="tovarpay" value="По карте" checked>
+            <label for="kart">по карте</label>
+        </div>
+    </div>
+    <div class="item">
+        <div>Цвет:</div>
+        <select id="color">
+            <option selected disabled>Не выбрано</option>
+            <option value="Red">Красный</option>
+            <option value="Blue">Синий</option>
+            <option value="Black">Черный</option>
+            <option value="Yellow">Желтый</option>
+        </select>
+    </div>
     <div class="item">
         <button onclick="addTovar()">Добавить товар</button>
     </div>
+
 </div>
 <div class="tovary">
     <h3>Товары</h3>
@@ -165,9 +198,10 @@
             <div class="tovar-name">Название</div>
             <div class="tovar-category">Категории</div>
             <div class="tovar-specials">Особенности: </div>
-            <div class="tovar-color">Цвет:</div>
             <div class="tovar-description">Описание</div>
             <div class="tovar-point">Пункт выдачи:</div>
+            <div class="tovar-pay">Способ оплаты:</div>
+            <div class="tovar-color">Цвет:</div>
             <div class="tovar-price-count">
                 <!--<div class="tovar-price">Цена: 1000 руб.</div>-->
                 <div class="tovar-price">
@@ -176,7 +210,6 @@
                         <div class="tovar-price-old">1000 руб.</div>
                         <div>1000 руб.</div>
                     </div>
-                    <div class="tovar-pay">Способ оплаты:</div>
                 </div>
                 <div class="count">Количество: 1000 шт.</div>
             </div>
