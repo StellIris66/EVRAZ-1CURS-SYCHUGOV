@@ -80,11 +80,13 @@ function addTovar() {
             <div class="tovar-category">${categories[selectCategory.value]}</div>
             <div class="tovar-specials">Особенности: ${specialsText}</div>
             <div class="tovar-point">Пункт выдачи: ${inputPoint.value}</div>
-            <div class="tovar-description">${inputDescription.value}</div>
+            <div class="tovar-description">Описание:
+                ${inputDescription.value}</div>
             <div class="tovar-pay">Способ оплаты: ${payChoose.value}</div>
+            <br>
             <div class="tovar-color">Цвет:${color[selectColor.value]}</div>
-            <div class="tovar-price-count">
-                ${price}
+            <br>
+            <div class="tovar-price-count">${price}</div>
                 <div class="count">Количество: ${inputCount.value} шт.</div>
             </div>
             <div id="del" class="tovar-close">X</div>`
@@ -92,15 +94,17 @@ function addTovar() {
     cardTovar.innerHTML = card;
     listDOM.append(cardTovar);
 
-    let del =document.getElementById('del')
-    del.addEventListener('click', function(){card.remove();})
+    let del = document.getElementById('del')
+    del.addEventListener('click', function () {
+        card.remove();
+    })
 
-inputName.value = '';
-inputCount.value = '';
-inputDiscount.value = '';
-inputDescription.value = '';
-inputPoint.value = '';
-inputPrice.value ='';
+    inputName.value = '';
+    inputCount.value = '';
+    inputDiscount.value = '';
+    inputDescription.value = '';
+    inputPoint.value = '';
+    inputPrice.value = '';
 
 
 }
