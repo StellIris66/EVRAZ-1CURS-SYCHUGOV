@@ -2,7 +2,7 @@ function dobav(){
     let inp1 = document.getElementById('in');
     let doel = document.getElementById('dobel');
     let a = inp1.innerText;
-    doel.innerText = a.innerText
+    doel = a
 }
 
 function nums(){
