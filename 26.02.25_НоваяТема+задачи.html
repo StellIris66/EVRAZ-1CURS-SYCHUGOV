@@ -8,6 +8,7 @@
             display: flex;
             flex-direction: row;
         }
+
         body > div {
             width: 50%;
         }
@@ -87,6 +88,11 @@
             margin-top: 15px;
         }
 
+        .tovar-point {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
         .hide {
             display: none !important;
         }
@@ -127,10 +133,10 @@
             <div>Есть скидка?</div>
 
             <div>
-                <input type="radio" id="yes" name="discount" value="true" onclick="discount(true)">
+                <input type="radio" id="yes" name="discount" value="true" onclick="discount2(true)">
                 <label for="yes">Да</label>
 
-                <input type="radio" id="no" name="discount" value="false" checked onclick="discount(false)">
+                <input type="radio" id="no" name="discount" value="false" checked onclick="discount2(false)">
                 <label for="no">Нет</label>
             </div>
         </div>
@@ -164,10 +170,41 @@
         </div>
 
         <div class="item">
-            <button id="button-add" onclick="addTovar()">Добавить товар</button>
-            <button id="button-edit" class="hide" onclick="editTovar()">Редактировать товар</button>
+            <div>Пункт выдачи:</div>
+            <textarea
+                    name=""
+                    id="point"
+                    cols="5"
+                    rows="2"
+            ></textarea>
         </div>
-    </form>
+
+        <div class="item">
+            <div>Способ оплаты:</div>
+            <div>
+                <input type="radio" id="nal" name="tovarpay" value="Наличными">
+                <label for="nal">наличными</label>
+
+                <input type="radio" id="kart" name="tovarpay" value="По карте" checked>
+                <label for="kart">по карте</label>
+            </div>
+        </div>
+        <div class="item">
+            <div>Цвет:</div>
+            <select id="color">
+                <option selected disabled>Не выбрано</option>
+                <option value="Red">Красный</option>
+                <option value="Blue">Синий</option>
+                <option value="Black">Черный</option>
+                <option value="Yellow">Желтый</option>
+            </select>
+        </div>
+
+<div class="item">
+    <button id="button-add" onclick="addTovar()">Добавить товар</button>
+    <button id="button-edit" class="hide" onclick="editTovar()">Редактировать товар</button>
+</div>
+</form>
 </div>
 <div class="tovary">
     <h3>Товары</h3>

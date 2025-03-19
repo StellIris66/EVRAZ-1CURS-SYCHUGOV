@@ -35,7 +35,7 @@ let color = {
     'Yellow': 'Желтый',
 };
 
-function discount(item) {
+function discount2(item) {
     let field = document.getElementById('discountDom');
 
     if (item) {
@@ -111,12 +111,15 @@ function addTovarCard(tovar, index) {
     let card = `<div class="tovar-name">${ tovar.name }</div>
             <div class="tovar-category">${ categories[tovar.category] }</div>
             <div class="tovar-specials">Особенности: ${ specialsText }</div>
+            <div class="tovar-point">Пункт выдачи: ${inputPoint.value}</div>
             <div class="tovar-description">${ tovar.description }</div>
+            <div class="tovar-pay">Способ оплаты: ${payChoose.value}</div>
+             <div class="tovar-color">Цвет:${color[selectColor.value]}</div>
             <div class="tovar-price-count">
                 ${ price }
                 <div class="count">Количество: ${ tovar.count } шт.</div>
             </div>
-            <div class="tovar-close">X</div>
+            <div class="tovar-close" onclick="deletedBro()">X</div>
             <div class="tovar-edit">
                 <button onclick="edit(${ index })">Редактировать</button>
             </div>`;
@@ -126,6 +129,9 @@ function addTovarCard(tovar, index) {
 
     event.preventDefault();
     form.reset();
+}
+function deletdBro(){
+
 }
 
 // редактирование товара, открытие свойств товара в форме товара
