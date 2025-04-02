@@ -119,7 +119,7 @@ function addTovarCard(tovar, index) {
                 ${ price }
                 <div class="count">Количество: ${ tovar.count } шт.</div>
             </div>
-            <div class="tovar-close" onclick="deletedBro()">X</div>
+            <div class="tovar-close" onclick="deletedBro(${ index })">X</div>
             <div class="tovar-edit">
                 <button onclick="edit(${ index })">Редактировать</button>
             </div>`;
@@ -130,8 +130,12 @@ function addTovarCard(tovar, index) {
     event.preventDefault();
     form.reset();
 }
-function deletdBro(){
+function deletedBro(productIndex){
+    // Удаляем товар из массива по индексу
+    products.splice(productIndex, 1);
 
+    // Обновляем список товаров
+    buildAgain();
 }
 
 // редактирование товара, открытие свойств товара в форме товара
